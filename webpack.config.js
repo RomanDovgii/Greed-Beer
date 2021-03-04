@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SplitByPathPlugin = require('split-by-path-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const fs = require('fs');
 const path = require('path');
 
@@ -59,12 +60,13 @@ module.exports = {
                         loader: "file-loader",
                         options: {outputPath: 'css/', name: 'style.min.css'}
                     },
+                    "sass-sourcemap-loader",
                     {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: true
-                        }
-                    }
+                      loader: "sass-loader",
+                      options: {
+                        sourceMap: true,
+                      },
+                    },
                 ]
             },
             {
@@ -77,5 +79,14 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    plugins: [].concat(htmlPlugins)
+    plugins: [
+        new CopyPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, "src/fonts"),
+              to: path.resolve(__dirname, "fonts/"),
+            }
+          ],
+        }),
+    ].concat(htmlPlugins)
 };

@@ -1,0 +1,14 @@
+.main {
+  background-color: $soft-pink;
+  display: grid;
+  grid-template-columns: minmax(640px, 680px) 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-rows: auto;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1 / 2;
+}

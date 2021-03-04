@@ -1,3 +1,12 @@
+@import "./fonts.scss";
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./general.scss";
+
+@import "./blocks/body.scss";
+@import "./blocks/header.scss";
+@import "./blocks/aside.scss";
+@import "./blocks/main.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/section.scss";
