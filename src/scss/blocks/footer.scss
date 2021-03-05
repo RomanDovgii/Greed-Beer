@@ -1,4 +1,37 @@
 .footer {
   background-color: $pink;
+  display: grid;
+  grid-template-columns: auto minmax(400px, $sm) auto;
+  padding-bottom: 20px;
 }
 
+.footer__wrapper {
+  max-width: $sm;
+  grid-column: 2 / -2;
+
+  display: flex;
+}
+
+
+.footer__logo {
+  margin-top: 15px;
+  margin-right: 41px;
+}
+
+.footer__navigation {
+  margin-right: 12px;
+  margin-top: 29px;
+}
+
+.footer__slogan {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: 39px;
+
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 2.7rem;
+  color: $bittersweet;
+
+  max-width: 200px;
+}

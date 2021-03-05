@@ -6,20 +6,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.body__wrapper {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr minmax(20px, 40px) minmax(640px, 680px) 1fr;
-  grid-template-rows: 100%;
-}
-
-.body__aside {
-  grid-column: 1 / 3;
-  grid-row: 1 / -1;
-}
-
-.body__main {
-  grid-column: 3 / -1;
-  grid-row: 1 / -1;
-}

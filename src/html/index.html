@@ -38,17 +38,12 @@
       </p>
     </div>
   </header>
-  <div class="body__wrapper">
-    <aside class="body__aside aside">
-      <p class="aside__text">About us</p>
-      <p class="aside__text">How we make it</p>
-      <p class="aside__text">Clients</p>
-      <p class="aside__text">Wives</p>
-      <p class="aside__text">Bank</p>
-    </aside>
-    <main class="body__main main">
-      <section class="main__section section">
-        <h2 class="visually-hidden">About us</h2>
+  <main class="body__main main">
+    <section class="main__section section">
+      <aside class="section__aside">
+        <h2 class="section__heading">About us</h2>
+      </aside>
+      <div class="section__wrapper">
         <p class="section__text">Why our beer is the best.</p>
         <ul class="section__list">
           <li class="section__item"></li>
@@ -59,9 +54,14 @@
           <li class="section__item"></li>
         </ul>
         <button class="section__button">Show more</button>
-      </section>
-      <section class="main__section section">
-        <h2 class="visually-hidden">How we make it</h2>
+
+      </div>
+    </section>
+    <section class="main__section section">
+      <aside class="section__aside">
+        <h2 class="section__heading">How we make it</h2>
+      </aside>
+      <div class="section__wrapper">
         <p class="section__text">Do you want to see how we make it?</p>
         <ul class="section__list section__list--small section__list--reverse">
           <li class="section__item"></li>
@@ -70,9 +70,13 @@
           <li class="section__item"></li>
           <li class="section__item"></li>
         </ul>
-      </section>
-      <section class="main__section section">
-        <h2 class="visually-hidden">Clients</h2>
+      </div>
+    </section>
+    <section class="main__section section">
+      <aside class="section__aside">
+        <h2 class="section__heading">Clients</h2>
+      </aside>
+      <div class="section__wrapper">
         <p class="section__text">Our happy clients...</p>
         <ul class="section__list section__list--small section__list--classic">
           <li class="section__item"></li>
@@ -81,9 +85,13 @@
           <li class="section__item"></li>
           <li class="section__item"></li>
         </ul>
-      </section>
-      <section class="main__section section">
-        <h2 class="visually-hidden">Wives</h2>
+      </div>
+    </section>
+    <section class="main__section section">
+      <aside class="section__aside">
+        <h2 class="section__heading">Wives</h2>
+      </aside>
+      <div class="section__wrapper">
         <p class="section__text">Our clients’ not so happy wives...</p>
         <ul class="section__list section__list--small section__list--wide">
           <li class="section__item"></li>
@@ -92,51 +100,64 @@
           <li class="section__item"></li>
           <li class="section__item"></li>
         </ul>
-      </section>
-      <section class="main__section section">
-        <h2 class="visually-hidden">IQ test</h2>
+      </div>
+    </section>
+    <section class="main__section section">
+      <aside class="section__aside">
+        <h2 class="section__heading">IQ test</h2>
+      </aside>
+      <div class="section__wrapper">
         <p class="section__text">We hope you are drunk... <br>Please, fill the form.</p>
 
         <form class="section__bank-form bank-form">
-          <div class="bank__form bank__form--front">
-            <input type="text" name="number" id="">
-            <input type="number" name="month" id="" min="1" max="12">
-            <input type="number" name="year" id="" min="1" max="99">
+          <div class="bank-form__front">
+            <label for="number" class="bank-form__label bank-form__label--number">Number</label>
+            <input class="bank-form__number" type="text" name="number" id="number" placeholder="1000 2000 3000 4000" required>
+
+            <label for="month" class="bank-form__label bank-form__label--month">Month</label>
+            <input class="bank-form__month" type="number" name="month" id="month" min="1" max="12" placeholder="02" required>
+
+            <label for="year" class="bank-form__label bank-form__label--year">Year</label>
+            <input class="bank-form__year" type="number" name="year" id="year" min="1" max="99" placeholder="22" required>
           </div>
-          <div class="bank__form bank__form--back">
-            <input type="number" name="cvv" id="" min="100" max="999">
+          <div class="bank-form__back">
+            <label for="" class="bank-form__label bank-form__label--cvv">CVV</label>
+            <input class="bank-form__cvv" type="number" name="cvv" id="" min="100" max="999" placeholder="559" required>
           </div>
 
-          <button type="submit">Send</button>
+          <button class="bank-form__button" type="submit">Send</button>
         </form>
-      </section>
-    </main>
-  </div>
+      </div>
+
+    </section>
+  </main>
   <footer class="body__footer footer">
-    <p class="header__slogan">
-      The best beer with grid support
-    </p>
+    <div class="footer__wrapper">
+      <p class="footer__slogan">
+        The best beer with grid support
+      </p>
 
-    <nav class="header__navigation navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a href="" class="navigation__link">About us</a>
-        </li>
-        <li class="navigation__item">
-          <a href="" class="navigation__link">How we make it</a>
-        </li>
-        <li class="navigation__item">
-          <a href="" class="navigation__link">Clients</a>
-        </li>
-        <li class="navigation__item">
-          <a href="" class="navigation__link">Wives</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="footer__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link navigation__link--footer">About us</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link navigation__link--footer">How we make it</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link navigation__link--footer">Clients</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link navigation__link--footer">Wives</a>
+          </li>
+        </ul>
+      </nav>
 
-    <a href="#" class="footer__logo">
-      <svg class="footer__img" width="148" height="130" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.92 400.17"><defs><style>.cls-1{fill:#ffab55;}.cls-1,.cls-3{stroke:#4d4d4d;stroke-width:0.25px;}.cls-1,.cls-2,.cls-3{stroke-miterlimit:10;}.cls-2{fill:none;stroke:#000;}.cls-3{fill:#ff785c;}</style></defs><path class="cls-1" d="M802,228.2c2.08,2.67-1,15.64-3,16.94s-7-1.54-7-1.54A32.82,32.82,0,0,1,782.84,257c-3.53,1.42-3.53,1.42-7.07,1.42-5.66,12-59.4,77.07-64.35,83.44s-11.31,38.18-14.14,50.2-77.07,80.61-83.44,87.68-72.71,72-81.26,81.26S521.21,573.11,517,579.47s-17.68,18.39-25.46,18.39-15.58-.69-25.47-10.59l-26.15-26.18-26.51-26.52c-9.9-9.9-10.59-17.7-10.59-25.48s12-21.21,18.39-25.45,9.19-7.07,18.44-15.62,74.19-74.89,81.26-81.26,75.66-80.61,87.68-83.43,43.84-9.2,50.21-14.15,71.41-58.69,83.44-64.34c0-3.54,0-3.54,1.41-7.07a32.91,32.91,0,0,1,13.44-9.2s-2.83-4.95-1.54-6.94,14.26-5.08,16.94-3,14.94,14.94,14.94,14.94Z" transform="translate(-372.85 -197.82)"/><path class="cls-2" d="M689.5,260.5" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M466.32,387.16H442.6a97.47,97.47,0,0,1-1.18-11.09c-6.07,10.93-16.54,13.73-27.58,13.73-28,0-40.86-21-40.86-72,0-55.65,19.2-73.63,49.85-73.63,39.69,0,42.86,31.38,43.21,42.33h-32.3c-.34-6.84-1.3-16.9-12-16.9-12,0-15,15.73-15,48.42,0,33.77,2.88,46.4,14.48,46.4,9.8,0,12.73-8.22,12.73-23.36v-9H420.22V306.75h46.1Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M484.29,315c0-18.54-.08-29.79-.28-37.19H514.4a168.39,168.39,0,0,1,.7,17.76c3.73-11.92,13.24-19.63,27.77-19.56v34.38c-18.64-.4-26.8,4.37-26.8,23.79v53H484.29Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M582.76,340.07c0,14.25,1.4,25.16,11.29,25.16,8.88,0,10.19-7.32,10.53-12.3H635c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.77-55.7,42.94-55.7,32.32,0,41.61,21.9,41.61,52.14,0,3.73-.13,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.52-10.39-20.52S583,309.82,583,319.92Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M679.48,340.07c0,14.25,1.39,25.16,11.28,25.16,8.88,0,10.19-7.32,10.54-12.3h30.39c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.31-27.78-42.31-57.5,0-36.87,14.78-55.7,42.94-55.7,32.32,0,41.62,21.9,41.62,52.14,0,3.73-.14,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.52-10.39-20.52s-10.94,10.42-10.94,20.52Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M830.29,240.07V354.61c0,14.92.15,26.82.35,32.55H800.12a91.49,91.49,0,0,1-.91-10.75c-4,8.09-11,12.62-23.64,12.62-21,0-31.16-17.29-31.16-57.66,0-36.44,11.93-55.41,35.24-55.41,10.79,0,16.63,3.88,18.85,7.83V240.07Zm-53.54,91.79c0,24.44,2.93,32.16,11,32.16,9.43,0,11.34-7.25,11.34-32.92,0-23.5-1.24-29.92-10.52-29.92C781.07,301.18,776.75,306.43,776.75,331.86Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M450.62,390.7h46.71c25.17,0,39.2,12.85,39.2,36.05,0,17.55-8,25.77-16.75,29,10.07,4,20.56,12.88,20.56,33.74,0,27.85-16.94,41.69-44.08,41.69H450.62Zm40,54.8c11.9,0,14.7-4.81,14.7-15.66,0-11.06-4.49-15.54-14.37-15.54H482v31.2ZM482,507.82h10.2c10,0,15.15-4.74,15.15-19.41,0-14.18-4.18-20.23-17.05-20.23H482Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M584.17,484.07c0,14.25,1.39,25.16,11.28,25.16,8.89,0,10.2-7.32,10.54-12.3h30.39c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.77-55.7,42.93-55.7,32.33,0,41.62,21.9,41.62,52.14,0,3.73-.14,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.53-10.39-20.53s-10.94,10.43-10.94,20.53Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M680.89,484.07c0,14.25,1.39,25.16,11.28,25.16,8.88,0,10.19-7.32,10.54-12.3H733.1c-.78,7.33-4,36.23-41.57,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.78-55.7,42.94-55.7,32.32,0,41.61,21.9,41.61,52.14,0,3.73-.13,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.53-10.39-20.53s-10.94,10.43-10.94,20.53Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M748.6,459c0-18.54-.07-29.79-.28-37.19h30.39a168.39,168.39,0,0,1,.7,17.76c3.73-11.92,13.24-19.63,27.77-19.56v34.38c-18.64-.4-26.79,4.37-26.79,23.79v53H748.6Z" transform="translate(-372.85 -197.82)"/></svg>
-    </a>
+      <a href="#" class="footer__logo">
+        <svg class="footer__img" width="148" height="130" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.92 400.17"><defs><style>.cls-1{fill:#ffab55;}.cls-1,.cls-3{stroke:#4d4d4d;stroke-width:0.25px;}.cls-1,.cls-2,.cls-3{stroke-miterlimit:10;}.cls-2{fill:none;stroke:#000;}.cls-3{fill:#ff785c;}</style></defs><path class="cls-1" d="M802,228.2c2.08,2.67-1,15.64-3,16.94s-7-1.54-7-1.54A32.82,32.82,0,0,1,782.84,257c-3.53,1.42-3.53,1.42-7.07,1.42-5.66,12-59.4,77.07-64.35,83.44s-11.31,38.18-14.14,50.2-77.07,80.61-83.44,87.68-72.71,72-81.26,81.26S521.21,573.11,517,579.47s-17.68,18.39-25.46,18.39-15.58-.69-25.47-10.59l-26.15-26.18-26.51-26.52c-9.9-9.9-10.59-17.7-10.59-25.48s12-21.21,18.39-25.45,9.19-7.07,18.44-15.62,74.19-74.89,81.26-81.26,75.66-80.61,87.68-83.43,43.84-9.2,50.21-14.15,71.41-58.69,83.44-64.34c0-3.54,0-3.54,1.41-7.07a32.91,32.91,0,0,1,13.44-9.2s-2.83-4.95-1.54-6.94,14.26-5.08,16.94-3,14.94,14.94,14.94,14.94Z" transform="translate(-372.85 -197.82)"/><path class="cls-2" d="M689.5,260.5" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M466.32,387.16H442.6a97.47,97.47,0,0,1-1.18-11.09c-6.07,10.93-16.54,13.73-27.58,13.73-28,0-40.86-21-40.86-72,0-55.65,19.2-73.63,49.85-73.63,39.69,0,42.86,31.38,43.21,42.33h-32.3c-.34-6.84-1.3-16.9-12-16.9-12,0-15,15.73-15,48.42,0,33.77,2.88,46.4,14.48,46.4,9.8,0,12.73-8.22,12.73-23.36v-9H420.22V306.75h46.1Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M484.29,315c0-18.54-.08-29.79-.28-37.19H514.4a168.39,168.39,0,0,1,.7,17.76c3.73-11.92,13.24-19.63,27.77-19.56v34.38c-18.64-.4-26.8,4.37-26.8,23.79v53H484.29Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M582.76,340.07c0,14.25,1.4,25.16,11.29,25.16,8.88,0,10.19-7.32,10.53-12.3H635c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.77-55.7,42.94-55.7,32.32,0,41.61,21.9,41.61,52.14,0,3.73-.13,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.52-10.39-20.52S583,309.82,583,319.92Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M679.48,340.07c0,14.25,1.39,25.16,11.28,25.16,8.88,0,10.19-7.32,10.54-12.3h30.39c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.31-27.78-42.31-57.5,0-36.87,14.78-55.7,42.94-55.7,32.32,0,41.62,21.9,41.62,52.14,0,3.73-.14,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.52-10.39-20.52s-10.94,10.42-10.94,20.52Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M830.29,240.07V354.61c0,14.92.15,26.82.35,32.55H800.12a91.49,91.49,0,0,1-.91-10.75c-4,8.09-11,12.62-23.64,12.62-21,0-31.16-17.29-31.16-57.66,0-36.44,11.93-55.41,35.24-55.41,10.79,0,16.63,3.88,18.85,7.83V240.07Zm-53.54,91.79c0,24.44,2.93,32.16,11,32.16,9.43,0,11.34-7.25,11.34-32.92,0-23.5-1.24-29.92-10.52-29.92C781.07,301.18,776.75,306.43,776.75,331.86Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M450.62,390.7h46.71c25.17,0,39.2,12.85,39.2,36.05,0,17.55-8,25.77-16.75,29,10.07,4,20.56,12.88,20.56,33.74,0,27.85-16.94,41.69-44.08,41.69H450.62Zm40,54.8c11.9,0,14.7-4.81,14.7-15.66,0-11.06-4.49-15.54-14.37-15.54H482v31.2ZM482,507.82h10.2c10,0,15.15-4.74,15.15-19.41,0-14.18-4.18-20.23-17.05-20.23H482Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M584.17,484.07c0,14.25,1.39,25.16,11.28,25.16,8.89,0,10.2-7.32,10.54-12.3h30.39c-.78,7.33-4,36.23-41.56,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.77-55.7,42.93-55.7,32.33,0,41.62,21.9,41.62,52.14,0,3.73-.14,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.53-10.39-20.53s-10.94,10.43-10.94,20.53Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M680.89,484.07c0,14.25,1.39,25.16,11.28,25.16,8.88,0,10.19-7.32,10.54-12.3H733.1c-.78,7.33-4,36.23-41.57,36.23-36.36,0-42.3-27.78-42.3-57.5,0-36.87,14.78-55.7,42.94-55.7,32.32,0,41.61,21.9,41.61,52.14,0,3.73-.13,9.72-.27,12Zm21.6-20.15c0-10.64-.48-20.53-10.39-20.53s-10.94,10.43-10.94,20.53Z" transform="translate(-372.85 -197.82)"/><path class="cls-3" d="M748.6,459c0-18.54-.07-29.79-.28-37.19h30.39a168.39,168.39,0,0,1,.7,17.76c3.73-11.92,13.24-19.63,27.77-19.56v34.38c-18.64-.4-26.79,4.37-26.79,23.79v53H748.6Z" transform="translate(-372.85 -197.82)"/></svg>
+      </a>
+    </div>
   </footer>
 </body>
 </html>

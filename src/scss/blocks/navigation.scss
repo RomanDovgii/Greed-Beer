@@ -13,6 +13,13 @@
   text-decoration: none;
   color: $bittersweet;
   font-weight: 800;
+  display: block;
+
+  &--footer {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+  }
 
   &:hover,
   &:focus {
