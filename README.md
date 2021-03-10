@@ -1,2 +1,2 @@
-# web-2_1-flex
- This page shows all flexbox properties
+# Greed beer
+ First beer which is fully compatible with grid.
